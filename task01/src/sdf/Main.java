@@ -67,9 +67,8 @@ public class Main {
                             wordCounts.put(word, 1);
                         }
                     }                    
-
-                }
-            }
+                } // end of for loop
+            }// end of while loop
             // print out wordCount, specific word and it's counter, and word frequency
             System.out.println("Word count = " + wordCount);
             System.out.println("The word " + wordFind + ", appears " + specificWordCount + " times");
@@ -92,7 +91,7 @@ public class Main {
                 fr.close();
                 br.close();
             }
-        }
+        } // end of try-finally block
 
     } // end of main method
 
