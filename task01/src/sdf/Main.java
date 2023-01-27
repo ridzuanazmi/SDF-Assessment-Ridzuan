@@ -21,7 +21,7 @@ public class Main {
         double wordCount = 0;
         double specificWordCount = 0;
 
-        // Create a HashMap to store the word and it's appearance
+        // Create a HashMap to store the word and it's occurrence
         HashMap<String, Integer> wordCounts = new HashMap<>();
 
         // Read the file name that is entered in the console
@@ -38,7 +38,7 @@ public class Main {
 
             String line;
             System.out.print("Enter word to count in file: ");
-            String wordFind = scanner.nextLine();
+            String wordFind = scanner.nextLine().trim().toLowerCase();
             System.out.println("word selected: " + wordFind + "\n");
 
             while ((line = br.readLine()) != null) {
@@ -78,12 +78,12 @@ public class Main {
 
             // print out wordCount, specific word and it's counter, and word frequency
             System.out.println("Word count = " + wordCount);
-            System.out.println("The word " + wordFind + ", appears " + specificWordCount + " times");
+            System.out.println("The word '" + wordFind + "' appears " + specificWordCount + " times");
             double wordFrequecy = specificWordCount / wordCount;
             System.out.printf("The frequency of the word %s is %.3f%n", wordFind, wordFrequecy);
 
             // use Comparator to help sort out wordCounts HashMap
-            Comparator<Map.Entry<String, Integer>> comparator = (e1, e2) -> e2.getValue().compareTo(e1.getValue());
+            Comparator<Map.Entry<String, Integer>> comparator = (o1, o2) -> o2.getValue().compareTo(o1.getValue());
             List<Map.Entry<String, Integer>> sortedWordCounts = wordCounts.entrySet().stream().sorted(comparator).collect(Collectors.toList());
 
             // List out the top 10 appearance
