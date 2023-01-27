@@ -71,8 +71,10 @@ public class Main {
                     System.out.println("Undefined operator");
                     break;
             } // end of switch
+
             // prints out result once completed
             System.out.println(result);
+            
         } // end of while loop
     } // end of main method
 }// end of Main class
