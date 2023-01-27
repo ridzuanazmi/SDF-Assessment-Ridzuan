@@ -48,7 +48,7 @@ public class Main {
                 num2 = Integer.parseInt(numB);
             }
 
-            // switch case loop to do the appropiate calculations and 
+            // switch case loop to do the appropiate calculations and
             // stores lastResult as the result when $last is entered as a number
             switch (oper) {
                 case "+":
@@ -63,6 +63,10 @@ public class Main {
                     result = num1 * num2;
                     lastResult = result;
                     break;
+                case "x":
+                    result = num1 * num2;
+                    lastResult = result;
+                    break;
                 case "/":
                     result = num1 / num2;
                     lastResult = result;
@@ -74,7 +78,7 @@ public class Main {
 
             // prints out result once completed
             System.out.println(result);
-            
+
         } // end of while loop
     } // end of main method
 }// end of Main class
